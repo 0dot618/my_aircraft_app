@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/bg_start"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:layout_width="159dp"
+        android:layout_height="57dp"
+        android:backgroundTint="#673AB7"
+        android:text="联机对战"
+        android:textSize="24sp"
+        android:id="@+id/gameTogether"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="159dp"
+        android:layout_height="57dp"
+        android:backgroundTint="#673AB7"
+        android:text="单机游戏"
+        android:textSize="24sp"
+        android:id="@+id/gameBegin"
+        app:layout_constraintBottom_toTopOf="@id/gameTogether"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/myRadioGroup"
+        app:layout_constraintTop_toBottomOf="@id/gameTogether"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="135dp"
+        android:layout_height="100dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="348dp" >
+
+        <RadioButton
+            android:id="@+id/open"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="开启音效"
+            android:textColor="@color/white"
+            android:theme="@style/MyRadioButton"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/close"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="关闭音效"
+            android:textColor="@color/white"
+            android:checked="true"
+            android:theme="@style/MyRadioButton"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
